@@ -1,6 +1,6 @@
+// WAP in c++ to sort an array using insertion sort.
 #include<iostream>
 using namespace std;
-
 void insertion_Sort(int nums[], int n){
     for(int i= 1; i<n; i++){
         int key = nums[i];
