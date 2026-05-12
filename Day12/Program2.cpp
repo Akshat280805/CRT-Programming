@@ -1,4 +1,4 @@
-// WAP in c++ to sort an array using bubble sort.
+// WAP in c++ to sort an array using selection sort.
 #include<iostream>
 using namespace std;
 void swap_array(int &a, int &b)
@@ -7,31 +7,26 @@ void swap_array(int &a, int &b)
     a = b;
     b = temp;
 }
-void bubble_Sort(int num[], int n)
+void selection_Sort(int arr[], int n)
 {
     for(int i = 0; i < n - 1; i++)
     {
-        bool flag = false;
-        for(int j = 0; j < n - i - 1; j++)
+        int mini = i;
+        for(int j = i + 1; j < n; j++)
         {
-            if(num[j] >  num[j + 1])
+            if(arr[j] < arr[mini])
             {
-                swap_array(num[j], num[j + 1]);
-                flag = true;
+                mini = j;
             }
         }
-        if(!flag)
-        {
-            cout << "Array is already sorted." << endl;
-            break;
-        }
+        swap_array(arr[i], arr[mini]);
     }
 }
 int main()
 {
     int arr[5] = {1, 2, 3, 4, 5};
     int size = sizeof(arr) / sizeof(arr[0]);
-    bubble_Sort(arr, size);
+    selection_Sort(arr, size);
     cout << "Sorted Array is : ";
     for(int i = 0; i < size; i++)
     {
