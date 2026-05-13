@@ -1,6 +1,4 @@
-//WAP in C++ to create a Singly Linked List with 5 nodes 
-//containing values 10, 20, 30, 40, and 50 
-//and display all the elements of the linked list.
+//WAP in C++ to create a Singly Linked List with 5 nodes containing values 10, 20, 30, 40, and 50 and display all the elements of the linked list.
 #include<iostream>
 using namespace std;
 class Node
@@ -8,7 +6,6 @@ class Node
 public:
     int data;
     Node* next;
-
     Node(int val)
     {
         data = val;
