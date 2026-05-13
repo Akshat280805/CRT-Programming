@@ -1,7 +1,6 @@
 //WAP in c++ to check if the number is power of 2 using recursion.
 #include<iostream>
 using namespace std;
-
 bool powerOfTwo(int x)
 {
     if(x == 0)
