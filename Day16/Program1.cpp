@@ -1,8 +1,9 @@
 //Write a C++ program to implement a Binary Tree using classes and display all nodes using recursion.
 #include<iostream>
 using namespace std;
-class TreeNode{
-public:
+class TreeNode
+{
+    public:
     int data;
     TreeNode* left;
     TreeNode* right;
@@ -12,8 +13,9 @@ public:
         this->right=NULL;
     }
 };
-class Tree{
-public:
+class Tree
+{
+    public:
     TreeNode* root;
     Tree(){
         root=NULL;
@@ -27,7 +29,8 @@ public:
         display(root->right);
     }
 };
-int main(){
+int main()
+{
     Tree t;
     t.root=new TreeNode(1);
     t.root->left=new TreeNode(2);
